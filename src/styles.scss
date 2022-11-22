@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;500;600;800&family=Outfit:wght@200;300;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+ html { 
+  font-family: 'inter',sans-serif;
+  color: #222;
+ }
+*{
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+*:focus-visible {
+  outline: none;
+}
+body , html {
+  height: 100%;
+  overflow-y: hidden;
+  background-image: url('https://images.unsplash.com/photo-1666410025931-96796794c5e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2ODg2OTA5NQ&ixlib=rb-4.0.3&q=80&w=1080');
+  // background-image: url('https://source.unsplash.com/random');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 40px;
+}
+h1.isbold , h2.isbold {
+  font-weight: bold;
+  letter-spacing: -2;
+}
+.container {
+  height: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding:10px;
+}
+.btn:not(.todo-icon-action-btn) {
+  margin: 20px 0 0 20px ;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  color: white;
+  font-family: inherit;
+  background-color: rgba(black , 0.7);
+  padding: 12px 22px;
+  border-radius: 5px;
+  border: none;
+  font-weight:600;
+  font-size: 18px;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba(black , 0.8);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  &:active {
+    background-color: rgba(black , 0.85);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  i {
+    font-size: 18px;
+    padding: 0 5px 0 0;
+    margin-left: -10px;
+  }
+}
+.has-blur-white-bg {
+  background-color: rgba(white,0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.text-box,.textarea {
+  font-size: 18px;
+  font-family: inherit;
+  width: calc(100%);
+  padding: 5px 10px;
+  margin: 10px 0;
+  background-color: rgba(white,0.7);
+  border-radius: 4px;
+  border: 2px solid rgba(black,0.3);
+  &:hover {
+    border: 2px solid rgba(black,0.5);
+    background-color: rgba(white,0.95);
+  }
+  &:focus {
+    background-color: white ;
+    border: 2px solid rgba(black,0.5);
+  }
+}
+.textarea {
+  resize: vertical;
+  height: 200px;
+  min-height: 100px;
+}

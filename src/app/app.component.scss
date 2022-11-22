@@ -1,0 +1,25 @@
+.app-wrapper {
+  display:  flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+.top-section {
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+.content-section {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  flex-grow: 1;
+}
+.bottom-section {
+  width: fit-content;
+}
+::ng-deep router-outlet + * {
+  height: 100%;
+} 
+

@@ -1,0 +1,20 @@
+.edit-note-wrapper {
+  padding: 20px;
+  height: 100%;
+}
+.edit-note-wrapper  div{
+  border-radius:10px ;
+  overflow-y: auto;
+  height: fit-content;
+  h4 {
+    margin-left: 3px;
+    color: #ff000094;
+    margin-top: -5px;
+    font-weight: 600;
+  }
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

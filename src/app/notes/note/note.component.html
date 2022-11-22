@@ -1,0 +1,13 @@
+<div class="notes-item">
+  <div class="note-card">
+    <div class="note-card-tile">
+      <p>{{note.title}}</p>
+    </div>
+    <div *ngIf="note.content" class="note-card-content">
+      <p>{{note.content}}</p>
+    </div>
+    <div class="delete"> 
+      <i class="material-icons" (click)="deleteNote()">delete</i>
+    </div>
+  </div>
+</div>

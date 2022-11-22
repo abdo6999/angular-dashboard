@@ -1,0 +1,14 @@
+<div class="todo-wrapper">
+  <div class="container">
+    <div class="content">
+      <div class="todo-items">
+        <ng-container *ngFor="let todo of todos;">
+          <app-todo (deleteTodo)="onDeleteTodo(todo)" (editeClick)="onEditeClick(todo)" [todo] = 'todo'></app-todo>
+        </ng-container>
+      </div>
+      <a routerLink="Add-todo" class="btn">
+        <i class="material-icons-outlined">add</i>Add
+      </a>
+    </div>
+  </div>
+</div>

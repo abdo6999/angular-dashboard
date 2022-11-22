@@ -1,0 +1,21 @@
+.add-noet-wrapper {
+  padding: 20px;
+  height: 100%;
+}
+.add-noet-wrapper  div{
+  height: fit-content;
+  max-height: 100%;
+  border-radius: 10px;
+  overflow-y: auto;
+  h4 {
+    margin-left: 3px;
+    color: #ff000094;
+    margin-top: -5px;
+    font-weight: 600;
+  }
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

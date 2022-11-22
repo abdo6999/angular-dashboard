@@ -1,0 +1,16 @@
+<div (click)="doCheck()" [ngClass]=" {'completed' : todo.completed}" class="todo-item">
+    <div class="check-box">
+      <i class="material-icons-outlined">check</i>
+    </div>
+    <div class="todo-text">
+      <p>{{todo.content}}</p>
+    </div>
+  <div class="todo-icons-action" (click)="$event.stopPropagation()">
+    <div [routerLink]="[todo.id]" (click)="onEditeClick()" class="btn  todo-icon-action-btn">
+      <i  class="material-icons">edit</i>
+    </div>
+    <div (click)="onDeleteTodo()" class="btn todo-icon-action-btn">
+      <i class="material-icons">delete</i>
+    </div>
+  </div>
+</div>
