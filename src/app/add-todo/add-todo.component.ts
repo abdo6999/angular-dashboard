@@ -19,7 +19,7 @@ export class AddTodoComponent implements OnInit {
     const todo : Todo = new Todo(input.value.content,false);
     if (input.valid){
       this.serve.addTodo(todo);
-      this.route.navigateByUrl('/todo')
+      this.route.navigateByUrl('/todos')
     }
   }
 }

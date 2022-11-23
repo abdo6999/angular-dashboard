@@ -11,6 +11,13 @@
   height: 105px;
   cursor: pointer;
   transition: all 0.1s;
+  .tile-icon {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &:hover {
     background-color: rgba(black, 0.68);
     -webkit-backdrop-filter: blur(2px);

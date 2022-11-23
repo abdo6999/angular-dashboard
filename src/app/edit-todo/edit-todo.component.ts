@@ -23,7 +23,7 @@ export class EditTodoComponent implements OnInit {
   }
   onFormsubmit(form : NgForm){
     this.serve.updateTodo(this.todo.id,form.value)
-    this.route.navigateByUrl('todo')
+    this.route.navigateByUrl('/todos')
   }
 
 }

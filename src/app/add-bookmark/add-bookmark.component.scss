@@ -1,11 +1,12 @@
-.edit-todo-wrapper {
+.add-bookmark-wrapper {
   padding: 20px;
   height: 100%;
 }
-.edit-todo-wrapper  div{
-  border-radius:10px ;
-  overflow-y: auto;
+.add-bookmark-wrapper  div{
   height: fit-content;
+  max-height: 100%;
+  border-radius: 10px;
+  overflow-y: auto;
   h4 {
     margin-left: 3px;
     color: #ff000094;

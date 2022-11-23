@@ -1,32 +1,16 @@
 <div class="bookmarks-wrapper">
   <div class="container">
-    <div class="bookmarks-container">
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
-      <app-bookmark-tile></app-bookmark-tile>
+    <div>
+      <div class="bookmarks-container">
+        <ng-container *ngFor="let Bookmark of Bookmarks;">
+          <app-bookmark-tile [bookmark]="Bookmark"></app-bookmark-tile>
+        </ng-container>
+      </div>
+      <div class="Add-bookmark" >
+        <a routerLink="/Add-bookmark" class="btn">
+          <i class="material-icons-outlined">add</i>Add
+        </a>
+      </div>
     </div>
   </div>
 </div>

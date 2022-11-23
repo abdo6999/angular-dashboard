@@ -3,7 +3,12 @@
     <div class="content">
       <div class="todo-items">
         <ng-container *ngFor="let todo of todos;">
-          <app-todo (deleteTodo)="onDeleteTodo(todo)" (editeClick)="onEditeClick(todo)" [todo] = 'todo'></app-todo>
+          <app-todo 
+            [@todoItemAnim]
+            (deleteTodo)="onDeleteTodo(todo)"
+            (editeClick)="onEditeClick(todo)"
+            [todo] = 'todo'>
+        </app-todo>
         </ng-container>
       </div>
       <a routerLink="Add-todo" class="btn">
