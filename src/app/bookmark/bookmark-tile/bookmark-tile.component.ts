@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BookmarkTileComponent implements OnInit {
   @Input() bookmark !: Bookmark;  
   icon !: string
+  faviconError !: boolean
   constructor() { }
 
   ngOnInit(): void {

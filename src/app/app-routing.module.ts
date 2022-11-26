@@ -1,3 +1,5 @@
+import { EditBookmarkComponent } from './bookmark-mange/edit-bookmark/edit-bookmark.component';
+import { BookmarkMangeComponent } from './bookmark-mange/bookmark-mange.component';
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
@@ -12,7 +14,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'' , redirectTo:'bookmarks',pathMatch: 'full'},
   {path:'bookmarks' , component:BookmarkComponent , data :{tap: 1}},
-  {path:'Add-bookmark' , component:AddBookmarkComponent },
+  {path:'bookmarks/Add' , component:AddBookmarkComponent },
+  {path:'bookmarks/mange' , component:BookmarkMangeComponent ,children:[
+    {path:':id' , component:EditBookmarkComponent}
+  ]},
   {path:'todos' , component:TodosComponent , data :{tap: 2}},
   {path:'todos/Add-todo' , component:AddTodoComponent },
   {path:'todos/:id' , component:EditTodoComponent},

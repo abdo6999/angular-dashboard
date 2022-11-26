@@ -1,21 +1,17 @@
-.add-bookmark-wrapper {
+.edit-bookmark-wrapper {
   padding: 20px;
   height: 100%;
 }
-.add-bookmark-wrapper  div{
+.edit-bookmark-wrapper  div{
+  border-radius:10px ;
+  overflow-y: auto;
   height: fit-content;
   max-height: 100%;
-  border-radius: 10px;
-  overflow-y: auto;
   h4 {
     margin-left: 3px;
     color: #ff000094;
     margin-top: -5px;
     font-weight: 600;
-  }
-  label {
-    font-weight: 600;
-    color: rgba(black,0.7);
   }
 }
 .buttons {

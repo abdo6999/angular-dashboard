@@ -16,5 +16,7 @@ export class NotesComponent implements OnInit {
   ngOnInit(): void {
      this.notes = this.noteServics.getNotes()
   }
-
+  trackById(index:any,item:Note){
+    return item.id
+  }
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Todo } from '../shared/todo-serveice/todo.model';
 import { NgForm } from '@angular/forms';
+import { NotificationService } from '../shared/notification-service/notification.service';
 
 @Component({
   selector: 'app-edit-todo',
@@ -13,7 +14,7 @@ export class EditTodoComponent implements OnInit {
 
 
   todo !: Todo
-  constructor(private routeA : ActivatedRoute ,private route : Router, private serve : TodoService) { }
+  constructor(private notifserve:NotificationService,private routeA : ActivatedRoute ,private route : Router, private serve : TodoService) { }
 
   ngOnInit(): void {
     this.routeA.paramMap.subscribe((pramMap:ParamMap)=>{
@@ -24,6 +25,7 @@ export class EditTodoComponent implements OnInit {
   onFormsubmit(form : NgForm){
     this.serve.updateTodo(this.todo.id,form.value)
     this.route.navigateByUrl('/todos')
+    this.notifserve.show('Todo Updated Successfully')
   }
 
 }

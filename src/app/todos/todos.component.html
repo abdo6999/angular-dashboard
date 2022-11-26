@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content">
       <div class="todo-items">
-        <ng-container *ngFor="let todo of todos;">
+        <ng-container *ngFor="let todo of todos;trackBy: trackById">
           <app-todo 
             [@todoItemAnim]
             (deleteTodo)="onDeleteTodo(todo)"

@@ -18,6 +18,12 @@
     align-items: center;
     justify-content: center;
   }
+  .tile-icon-error {
+    background-color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 600;
+  }
   &:hover {
     background-color: rgba(black, 0.68);
     -webkit-backdrop-filter: blur(2px);

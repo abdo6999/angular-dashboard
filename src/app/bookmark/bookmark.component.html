@@ -1,13 +1,13 @@
-<div class="bookmarks-wrapper">
+<div class="bookmarks-wrapper ">
   <div class="container">
     <div>
       <div class="bookmarks-container">
-        <ng-container *ngFor="let Bookmark of Bookmarks;">
-          <app-bookmark-tile [bookmark]="Bookmark"></app-bookmark-tile>
+        <ng-container *ngFor="let Bookmark of Bookmarks; trackBy: trackById">
+          <app-bookmark-tile [routerLink]="['mange/'+ Bookmark.id]" [bookmark]="Bookmark"></app-bookmark-tile>
         </ng-container>
       </div>
       <div class="Add-bookmark" >
-        <a routerLink="/Add-bookmark" class="btn">
+        <a routerLink="Add" class="btn">
           <i class="material-icons-outlined">add</i>Add
         </a>
       </div>

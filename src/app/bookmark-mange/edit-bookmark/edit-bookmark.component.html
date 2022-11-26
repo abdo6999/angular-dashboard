@@ -1,0 +1,20 @@
+<div class="edit-bookmark-wrapper ">
+  <div class="container has-blur-white-bg">
+    <h2 class="isbold">Edit Bookmark</h2> 
+    <form #form = 'ngForm' (ngSubmit)="onFormsubmit(form)">
+      <div class="form-field">
+          <label for="title">Name</label>
+          <input  [ngModel]="bookmark?.title"  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
+      </div>
+      <div class="form-field">
+          <label for="url">URL</label>
+          <input  [ngModel]="bookmark?.url" required  name="url" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark url ...." >
+      </div>
+      <div class="buttons">
+        <a class="btn" routerLink="../">Cancel</a>
+        <button type="button"  (click)="delete(form)" class="btn">delete</button>
+        <button  class="btn">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

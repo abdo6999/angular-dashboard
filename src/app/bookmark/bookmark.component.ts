@@ -13,5 +13,7 @@ export class BookmarkComponent implements OnInit {
   ngOnInit(): void {
     this.Bookmarks = this.serve.getBookmarks()
   }
-
+  trackById(index:any,item:Bookmark){
+    return item.id
+  }
 }

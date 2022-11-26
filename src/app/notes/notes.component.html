@@ -1,10 +1,10 @@
 <div class="notes-wrapper">
   <div class="container">
     <div class="content">
-      <ng-container *ngFor="let note of notes;">
+      <ng-container *ngFor="let note of notes; trackBy: trackById">
           <app-note [routerLink]="[note.id]" [note]="note"></app-note>
       </ng-container>
-      <a routerLink="Add-bookmark" class="btn">
+      <a routerLink="Add-notes" class="btn">
         <i class="material-icons-outlined">add</i>Add
       </a>
     </div>
