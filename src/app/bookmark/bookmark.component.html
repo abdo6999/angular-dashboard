@@ -3,13 +3,20 @@
     <div>
       <div class="bookmarks-container">
         <ng-container *ngFor="let Bookmark of Bookmarks; trackBy: trackById">
-          <app-bookmark-tile [routerLink]="['mange/'+ Bookmark.id]" [bookmark]="Bookmark"></app-bookmark-tile>
+          <app-bookmark-tile  [bookmark]="Bookmark"></app-bookmark-tile>
         </ng-container>
       </div>
-      <div class="Add-bookmark" >
+      <div class="btn-bookmark" >
+        <div class="Add-bookmark" >
         <a routerLink="Add" class="btn">
           <i class="material-icons-outlined">add</i>Add
         </a>
+      </div>
+        <div class="Add-bookmark" >
+          <a routerLink="mange" class="btn">
+            <i class="material-icons">settings</i>mange
+          </a>
+        </div>
       </div>
     </div>
   </div>

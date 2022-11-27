@@ -19,7 +19,6 @@
 body , html {
   height: 100%;
   overflow-y: hidden;
-  background-image: url('https://images.unsplash.com/photo-1666410025931-96796794c5e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2ODg2OTA5NQ&ixlib=rb-4.0.3&q=80&w=1080');
   // background-image: url('https://source.unsplash.com/random');
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,7 +69,6 @@ h1.isbold , h2.isbold {
     backdrop-filter: blur(3px);
   }
   i {
-    font-size: 18px;
     padding: 0 5px 0 0;
     margin-left: -10px;
   }
