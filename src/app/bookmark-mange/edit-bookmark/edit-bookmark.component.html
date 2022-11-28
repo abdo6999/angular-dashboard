@@ -4,23 +4,27 @@
     <h2 class="isbold onselect" *ngIf="!bookmark">select Bookmark</h2> 
     <form #form = 'ngForm' (ngSubmit)="onFormsubmit(form)" *ngIf="bookmark">
       <div class="form-field">
+        <div class="label">
           <label for="title">Name</label>
-          <input  [ngModel]="bookmark.title" required  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
-          <ng-container *ngIf="titleField.invalid">
-            <h4 *ngIf="titleField.errors!['required'] && titleField.touched || form.submitted ">this fild is required</h4>
-            <h4 *ngIf="titleField.errors!['minlength']">title must be at least 3 characters</h4>
-          </ng-container>
+        </div>
+        <input  [ngModel]="bookmark.title" required  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
+        <ng-container *ngIf="titleField.invalid">
+          <h4 *ngIf="titleField.errors!['required'] && titleField.touched || form.submitted ">this fild is required</h4>
+          <h4 *ngIf="titleField.errors!['minlength']">title must be at least 3 characters</h4>
+        </ng-container>
       </div>
       <div class="form-field">
+        <div class="label">
           <label for="url">URL</label>
+        </div>
           <input  [ngModel]="bookmark.url" required  name="url" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark url ...." >
       </div>
       <div class="buttons">
-        <a class="btn" routerLink="../">Cancel</a>
-        <button type="button"  (click)="delete(form)" class="btn">delete</button>
-        <button  class="btn">Save</button>
+        <a class="btn btn-secondary" routerLink="../">Cancel</a>
+        <button type="button"  (click)="delete(form)" class="btn btn-warn">delete</button>
+        <button  class="btn btn-prim">Save</button>
       </div>
     </form>
-    <a class="btn onselect-btn" *ngIf="!bookmark" routerLink="../">Cancel</a>
+    <a class="btn btn-secondary onselect-btn" *ngIf="!bookmark" routerLink="../">Cancel</a>
   </div>
 </div>

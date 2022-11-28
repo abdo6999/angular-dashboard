@@ -3,16 +3,20 @@
     <h2 class="isbold">New Bookmark</h2> 
     <form #form = 'ngForm' (ngSubmit)="onFormsubmit(form)">
       <div class="form-field">
-        <label for="title">Name</label>
+        <div class="label">
+          <label for="title">Name</label>
+        </div>
         <input  ngModel  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
       </div>
       <div class="form-field">
-        <label for="url">URL</label>
+        <div class="label">
+          <label for="url">URL</label>
+        </div>
         <input  ngModel required  name="url" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark url ...." >
       </div>
       <div class="buttons">
-        <a class="btn" routerLink="../">Cancel</a>
-        <button  class="btn">Create Bookmark</button>
+        <a class="btn-secondary btn" routerLink="../">Cancel</a>
+        <button  class="btn-prim btn">Create Bookmark</button>
       </div>
     </form>
   </div>
