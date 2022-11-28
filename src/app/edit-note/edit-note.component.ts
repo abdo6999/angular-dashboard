@@ -21,8 +21,10 @@ export class EditNoteComponent implements OnInit {
     })
   }
   onFormsubmit(form : NgForm){
-    this.serve.updateNote(this.note.id,form.value)
-    this.route.navigateByUrl('notes')
-    this.notifserve.show('Notes Updated Successfully')
+    if (form.value.title) {
+      this.serve.updateNote(this.note.id,form.value)
+      this.route.navigateByUrl('notes')
+      this.notifserve.show('Notes Updated Successfully')
+    }
   }
 }

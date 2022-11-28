@@ -35,14 +35,17 @@ export class EditBookmarkComponent implements OnInit {
   }
 
   onFormsubmit(input : NgForm ){
+    
     try {
-      const {title,url} = input.value
-      this.serve.updateBookmark(this.bookmark.id,{
-        title,
-        url:new URL(url)
-      })
-      this.router.navigateByUrl('bookmarks/mange')
-      this.notifserve.show('bookmark Updated Successfully')
+      if (input.value.title) {
+        const {title,url} = input.value
+        this.serve.updateBookmark(this.bookmark.id,{
+          title,
+          url:new URL(url)
+        })
+        this.router.navigateByUrl('bookmarks/mange')
+        this.notifserve.show('bookmark Updated Successfully')
+      }
     } catch (error) {
       
     }

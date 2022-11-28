@@ -5,7 +5,11 @@
     <form #form = 'ngForm' (ngSubmit)="onFormsubmit(form)" *ngIf="bookmark">
       <div class="form-field">
           <label for="title">Name</label>
-          <input  [ngModel]="bookmark.title"  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
+          <input  [ngModel]="bookmark.title" required  #titleField='ngModel' name="title" class="text-box" type="text" minlength="3" placeholder="Enter Bookmark name ...." >
+          <ng-container *ngIf="titleField.invalid">
+            <h4 *ngIf="titleField.errors!['required'] && titleField.touched || form.submitted ">this fild is required</h4>
+            <h4 *ngIf="titleField.errors!['minlength']">title must be at least 3 characters</h4>
+          </ng-container>
       </div>
       <div class="form-field">
           <label for="url">URL</label>

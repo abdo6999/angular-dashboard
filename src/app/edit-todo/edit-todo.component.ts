@@ -23,9 +23,11 @@ export class EditTodoComponent implements OnInit {
     })
   }
   onFormsubmit(form : NgForm){
-    this.serve.updateTodo(this.todo.id,form.value)
-    this.route.navigateByUrl('/todos')
-    this.notifserve.show('Todo Updated Successfully')
+    if (form.value.content) {
+      this.serve.updateTodo(this.todo.id,form.value)
+      this.route.navigateByUrl('/todos')
+      this.notifserve.show('Todo Updated Successfully')
+    }
   }
 
 }
