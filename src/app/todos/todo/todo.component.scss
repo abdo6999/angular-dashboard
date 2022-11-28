@@ -33,9 +33,12 @@
       transition: all 0.2;
       width: 92%;
       p {
-        overflow-wrap: break-word;
-        height: fit-content;
-        vertical-align: middle;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-word;
+        text-overflow: ellipsis;
         padding: 10px 12px;
         line-height: 1.8;
         width: 100%;

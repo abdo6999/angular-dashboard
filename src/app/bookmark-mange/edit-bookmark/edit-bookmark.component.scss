@@ -1,8 +1,9 @@
+
 .edit-bookmark-wrapper {
   padding: 20px;
   height: 100%;
 }
-.edit-bookmark-wrapper  div{
+.edit-bookmark-wrapper  .container{
   border-radius:10px ;
   overflow-y: auto;
   height: fit-content;
@@ -13,6 +14,13 @@
     margin-top: -5px;
     font-weight: 600;
   }
+}
+.container:has(.onselect){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 100% !important;
 }
 .buttons {
   display: flex;

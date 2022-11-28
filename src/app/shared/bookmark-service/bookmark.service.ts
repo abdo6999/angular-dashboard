@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { filter, fromEvent, map, Subject } from 'rxjs';
+import {  fromEvent} from 'rxjs';
 import { Bookmark } from './bookmark.model';
 
 @Injectable({

@@ -21,6 +21,7 @@ import { BookmarkMangeComponent } from './bookmark-mange/bookmark-mange.componen
 import { EditBookmarkComponent } from './bookmark-mange/edit-bookmark/edit-bookmark.component';
 import { RouterModule } from '@angular/router';
 import { NotificationComponent } from './notification/notification.component';
+import { WrongRouteComponent } from './wrong-route/wrong-route.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { NotificationComponent } from './notification/notification.component';
     AddBookmarkComponent,
     BookmarkMangeComponent,
     EditBookmarkComponent,
-    NotificationComponent
+    NotificationComponent,
+    WrongRouteComponent
   ],
   imports: [
     RouterModule,

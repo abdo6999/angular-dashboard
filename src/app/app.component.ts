@@ -175,7 +175,6 @@ export class AppComponent {
     const imgElement = img.target as HTMLImageElement
     const src = imgElement.src
     this.background = this.background.filter(b => b === src)
-    console.log(imgElement)
     this.loadingImg = false
   }
 }

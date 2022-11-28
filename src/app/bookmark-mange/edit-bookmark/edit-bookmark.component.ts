@@ -43,7 +43,6 @@ export class EditBookmarkComponent implements OnInit {
       })
       this.router.navigateByUrl('bookmarks/mange')
       this.notifserve.show('bookmark Updated Successfully')
-      input.reset('');
     } catch (error) {
       
     }
@@ -53,7 +52,6 @@ export class EditBookmarkComponent implements OnInit {
         this.serve.deleteBookmark(this.bookmark.id);
         this.router.navigateByUrl('bookmarks/mange')
         this.notifserve.show('bookmark Deleted Successfully')
-        form.reset('');
     } catch (error) {
         this.router.navigateByUrl('bookmarks')
     }
