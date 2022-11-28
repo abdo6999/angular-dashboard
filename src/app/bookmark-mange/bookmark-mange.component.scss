@@ -55,3 +55,39 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+@media (max-width:768px) {
+  .manage-bookmarks-wrapper {
+    flex-direction: column;
+  }
+  .sidebar{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    .sidebar-items  {
+      a::before{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        bottom: -10px;
+        left: 25%;
+        background-color: white;
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.2s;
+      }
+      a.selected::before {
+        height: 2px;
+        width: 50%;
+        bottom: -10px;
+        left: 25%;
+        color: rgba(white,0.90);
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+}
