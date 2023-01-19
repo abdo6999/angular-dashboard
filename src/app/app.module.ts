@@ -22,6 +22,7 @@ import { EditBookmarkComponent } from './bookmark-mange/edit-bookmark/edit-bookm
 import { RouterModule } from '@angular/router';
 import { NotificationComponent } from './notification/notification.component';
 import { WrongRouteComponent } from './wrong-route/wrong-route.component';
+import {HashLocationStrategy,LocationStrategy} from '@angular/common'
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,9 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:LocationStrategy , useClass:HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
