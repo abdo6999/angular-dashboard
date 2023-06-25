@@ -35,7 +35,7 @@ export class EditBookmarkComponent implements OnInit {
   }
 
   onFormsubmit(input : NgForm ){
-    
+
     try {
       if (input.value.title) {
         const {title,url} = input.value
@@ -47,7 +47,7 @@ export class EditBookmarkComponent implements OnInit {
         this.notifserve.show('bookmark Updated Successfully')
       }
     } catch (error) {
-      
+
     }
   }
   delete(form:NgForm){

@@ -11,7 +11,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   toggle(el: Array<any>,target:any ) {
     for (let i = 0 ; i < el.length ; i++){
       if (el[i].classList.contains('active') && el[i] !== target){

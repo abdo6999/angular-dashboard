@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./bookmark-tile.component.scss']
 })
 export class BookmarkTileComponent implements OnInit {
-  @Input() bookmark !: Bookmark;  
+  @Input() bookmark !: Bookmark;
   icon !: string
   faviconError !: boolean
   constructor() { }

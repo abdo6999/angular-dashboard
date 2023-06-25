@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
   @Output() editeClick: EventEmitter<void> = new EventEmitter()
   @Output() deleteTodo: EventEmitter<void> = new EventEmitter()
   constructor(private serve : TodoService) { }
-  
+
   ngOnInit(): void {
   }
   doCheck(){

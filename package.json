@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev": "lite-server --baseDir=\"dist/angular-dashboard\""
+    "dev": "lite-server --baseDir=\"./dist/angular-dashboard\""
   },
   "private": true,
   "dependencies": {

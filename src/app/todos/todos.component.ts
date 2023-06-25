@@ -24,7 +24,7 @@ import { Component, OnInit } from '@angular/core';
 //     transition('leave',[
 //       animate(1000,style({
 //         opacity:0,
-        
+
 //       }))
 //     ])
 //   ])
